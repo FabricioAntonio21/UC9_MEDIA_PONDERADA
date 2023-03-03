@@ -40,7 +40,7 @@ for (l = 0; l <= 4; l++)
     {
         resultado = "Reprovado por Faltas";
     }
-    if (total <= 6 && presenca > 25)
+    if (total < 6 && presenca > 25)
     {
         resultado = "Reprovado por Menção e Faltas";
     }
