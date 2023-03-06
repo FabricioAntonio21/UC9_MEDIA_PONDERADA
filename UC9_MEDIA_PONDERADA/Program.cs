@@ -7,6 +7,10 @@ int trabalho = 0;
 double total = 0;
 string resultado = " ";
 double presenca = 0;
+double nota1 = 0;
+double nota2 = 0;
+double nota3 = 0;
+
 for (l = 0; l <= 4; l++)
 {
     Console.WriteLine("Bem vindo, Professor(a) \n -> Informe o nome do Aluno desejado");
@@ -25,7 +29,11 @@ for (l = 0; l <= 4; l++)
     media[l, c++] = Console.ReadLine();
     c = 0;
 
-    total = ((int.Parse(media[l, 3]) + int.Parse(media[l, 4]) + int.Parse(media[l, 5])) / 3 ) + trabalho;
+    nota1 = Double.Parse(media[l, 3]) * 0.30;
+    nota2 = Double.Parse(media[l, 4]) * 0.25;
+    nota3 = Double.Parse(media[l, 5]) * 0.35;
+
+    total = (nota1 + nota2 + nota3) / 3 + trabalho;
     presenca = (double.Parse(media[l, 2]) / double.Parse(media[l, 1])) * 100;
 
     if (total >= 6 && presenca <= 25)
